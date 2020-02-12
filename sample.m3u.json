@@ -1,0 +1,15 @@
+[{
+        "name": "Sample Without properties",
+        "properties": {},
+        "url": "http://null"
+    },
+    {
+        "name": "Sample With Properties",
+        "properties": {
+            "tvg-id": "ID",
+            "tvg-name": "Sample",
+            "tvg-logo": "http://logourl.eu"
+        },
+        "url": "http://null"
+    }
+]

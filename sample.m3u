@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1,Sample Without properties
+http://null
+#EXTINF:-1 tvg-id="ID" tvg-name="Sample" tvg-logo="http://logourl.eu", Sample With Properties
+http://null
