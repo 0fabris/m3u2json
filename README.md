@@ -1,4 +1,4 @@
-#M3UtoJSON
+M3UtoJSON
 =========
 
 This script allows you to convert M3U Playlists into JSON Objects,
