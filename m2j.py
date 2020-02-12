@@ -35,15 +35,13 @@ class M3U_to_JSON():
             self.nomeout = self.nomep+".json"
 
         self.start()
-        #print(self._parseProperties('#EXTINF:-1 tvg-name="rai" tvg-id="001",Rai 1'))
 
     def start(self):
         with open(self.nomep,"r") as f:
             if "json" in self.nomep:
                 self.fcontent = json.load(f)
-            else:#except json.decoder.JSONDecodeError:
+            else:
                 self.fcontent = f.read()
-        #print("ok: "+ self.fcontent)
 
         ch = Channel()
         for i in self.fcontent.split("\n"):
@@ -55,7 +53,7 @@ class M3U_to_JSON():
                 except:
                     ch.prop = {}
                 ch.name = i.split(",")[-1].strip()
-                #print(i.split(","
+                
             elif "://" in i:
                 ch.url = i
                 self.listach.append(ch)
@@ -90,4 +88,4 @@ if __name__ == "__main__":
         except:
             print("Error, please report this to the dev.")
     else:
-        print("Utilizzo: ./m2j.py nomepl.(m3u|json) [nomefile.(json|m3u)]")
+        print("Usage: ./m2j.py nomepl.(m3u|json) [nomefile.(json|m3u)]")
